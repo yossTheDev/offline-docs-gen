@@ -34,12 +34,15 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-- name: Install Express Docs
-- run: |
-git clone --depth=1 https://github.com/expressjs/expressjs.com
-cd expressjs.com
-bundle install
-gem install jekyll-redirect-from
-bundle exec jekyll build
-cd ..
-tar czf "expressjs.tar.gz" expressjs.com/_site
+
+     # Run docs
+     - name: Install Express Docs
+     - run: |
+     sudo apt install git gem
+     git clone --depth=1 https://github.com/expressjs/expressjs.com
+     cd expressjs.com
+     bundle install
+     gem install jekyll-redirect-from
+     bundle exec jekyll build
+     cd ..
+     tar czf "expressjs.tar.gz" expressjs.com/_site
