@@ -42,9 +42,9 @@ jobs:
           sudo gem install bundler
           git clone --depth=1 https://github.com/expressjs/expressjs.com
           cd expressjs.com
-          bundle install
-          gem install jekyll-redirect-from
-          bundle exec jekyll build
+          sudo bundle install
+          sudo gem install jekyll-redirect-from
+          sudo bundle exec jekyll build
           cd ..
           tar czf "expressjs.tar.gz" expressjs.com/_site
 
