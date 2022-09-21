@@ -39,6 +39,7 @@ jobs:
       - name: Install Express Docs
         run: |
           sudo apt install git gem
+          sudo gem install bundler
           git clone --depth=1 https://github.com/expressjs/expressjs.com
           cd expressjs.com
           bundle install
