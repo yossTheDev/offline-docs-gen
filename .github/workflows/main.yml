@@ -48,20 +48,20 @@ jobs:
           cd ..
           tar czf "expressjs.tar.gz" expressjs.com/_site
 
-       # Create artifacts
+      # Create artifacts
        - name: Create artifacts
-         run: |
-           mkdir -p path/to/artifact-A
-           mkdir -p path/to/artifact-B
-           echo "Lorem ipsum dolor sit amet" > path/to/artifact-A/file-A.txt
-           echo "Hello world from file B" > path/to/artifact-B/file-B.txt
-           cd expressjs.com
-           cd.. 
-           echo "express" > expressjs.tar.gz
+        run: |
+          mkdir -p path/to/artifact-A
+          mkdir -p path/to/artifact-B
+          echo "Lorem ipsum dolor sit amet" > path/to/artifact-A/file-A.txt
+          echo "Hello world from file B" > path/to/artifact-B/file-B.txt
+          cd expressjs.com
+          cd.. 
+          echo "express" > expressjs.tar.gz
 
        # Upload Artifacts
-       - name: Upload artifact A
-         uses: actions/upload-artifact@v1
-         with:
-           name: 'Artifact-A'
-           path: expressjs.tar.gz
+      - name: Upload artifact A
+        uses: actions/upload-artifact@v1
+        with:
+          name: 'Artifact-A'
+          path: expressjs.tar.gz
