@@ -22,7 +22,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
@@ -48,7 +47,7 @@ jobs:
           cd ..
           tar czf "expressjs.tar.gz" expressjs.com/_site
 
-      # Create artifacts
+       # Create artifacts
        - name: Create artifacts
         run: |
           mkdir -p path/to/artifact-A
@@ -59,7 +58,7 @@ jobs:
           cd.. 
           echo "express" > expressjs.tar.gz
 
-       # Upload Artifact
+      # Upload Artifact
       - name: Upload artifact A
       uses: actions/upload-artifact@v1
       with:
