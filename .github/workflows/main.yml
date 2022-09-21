@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+   runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -47,20 +47,20 @@ jobs:
           cd ..
           tar czf "expressjs.tar.gz" expressjs.com/_site
 
-       # Create artifacts
+      # Create artifacts
        - name: Create artifacts
-        run: |
-          mkdir -p path/to/artifact-A
-          mkdir -p path/to/artifact-B
-          echo "Lorem ipsum dolor sit amet" > path/to/artifact-A/file-A.txt
-          echo "Hello world from file B" > path/to/artifact-B/file-B.txt
-          cd expressjs.com
-          cd.. 
-          echo "express" > expressjs.tar.gz
+         run: |
+           mkdir -p path/to/artifact-A
+           mkdir -p path/to/artifact-B
+           echo "Lorem ipsum dolor sit amet" > path/to/artifact-A/file-A.txt
+           echo "Hello world from file B" > path/to/artifact-B/file-B.txt
+           cd expressjs.com
+           cd.. 
+           echo "express" > expressjs.tar.gz
 
-      # Upload Artifact
+       # Upload Artifact
       - name: Upload artifact A
-      uses: actions/upload-artifact@v1
-      with:
-          name: 'Artifact-A'
-          path: expressjs.tar.gz
+        uses: actions/upload-artifact@v1
+        with:
+           name: 'Artifact-A'
+           path: expressjs.tar.gz
