@@ -47,6 +47,7 @@ jobs:
           bundle exec jekyll build
           cd ..
           tar czf "expressjs.tar.gz" expressjs.com/_site
+
        # Create artifacts
        - name: Create artifacts
            run: |
@@ -57,7 +58,7 @@ jobs:
              cd expressjs.com
              cd.. 
              echo "express" > expressjs.tar.gz
-    
+       # Upload Artifacts
        - name: Upload artifact A
            uses: actions/upload-artifact@v1
          with:
