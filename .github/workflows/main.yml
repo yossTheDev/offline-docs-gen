@@ -61,7 +61,7 @@ jobs:
 
        # Upload Artifacts
       - name: Upload artifact A
-        uses: actions/upload-artifact@v1
-        with:
+      uses: actions/upload-artifact@v1
+      with:
           name: 'Artifact-A'
           path: expressjs.tar.gz
