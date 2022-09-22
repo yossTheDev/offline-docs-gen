@@ -55,8 +55,6 @@ jobs:
           mkdir -p path/to/artifact-B
           echo "Lorem ipsum dolor sit amet" > path/to/artifact-A/file-A.txt
           echo "Hello world from file B" > path/to/artifact-B/file-B.txt
-          cd expressjs.com
-          cd.. 
           echo "express" > expressjs.tar.gz
 
       # Runs a set of commands using the runners shell
